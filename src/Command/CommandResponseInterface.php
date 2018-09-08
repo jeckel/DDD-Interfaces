@@ -1,6 +1,7 @@
 <?php
 namespace DDDI\Command;
 
+use DDDI\Event\EventCollection;
 use DDDI\Event\EventInterface;
 
 /**
@@ -10,13 +11,17 @@ use DDDI\Event\EventInterface;
 interface CommandResponseInterface
 {
     /**
-     * @param EventInterface ...$events
-     * @return self
+     * @return bool
      */
-    public function setEvents(EventInterface ...$events): self;
+    public function isAck(): bool;
 
     /**
      * @return bool
      */
-    public function isSuccess(): bool;
+    public function isNack(): bool;
+
+    /**
+     * @return EventCollection|null
+     */
+    public function getEvents(): ?EventCollection;
 }
