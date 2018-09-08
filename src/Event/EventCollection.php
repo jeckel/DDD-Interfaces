@@ -8,7 +8,7 @@ namespace DDDI\Event;
  */
 class EventCollection implements \IteratorAggregate
 {
-    /** @var EventInterface... */
+    /** @var []EventInterface */
     protected $events;
 
     /**
@@ -46,5 +46,13 @@ class EventCollection implements \IteratorAggregate
     public function getIterator()
     {
         return new \ArrayIterator($this->events);
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray(): array
+    {
+        return $this->events;
     }
 }
