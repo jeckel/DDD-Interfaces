@@ -34,7 +34,7 @@ class EventCollection implements \IteratorAggregate
      * @param EventInterface ...$events
      * @return EventCollection
      */
-    public function addEvent(EventInterface ...$events): EventCollection
+    public function addEvents(EventInterface ...$events): EventCollection
     {
         $this->events = array_merge($this->events, $events);
         return $this;
