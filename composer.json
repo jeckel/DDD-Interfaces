@@ -1,0 +1,27 @@
+{
+  "name": "jeckel/ddd-interfaces",
+  "description": "DDD interfaces and traits",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Julien Mercier-Rojas",
+      "email": "julien@jeckel-lab.fr"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1",
+    "beberlei/assert": "^3.0",
+    "ramsey/uuid": "^3.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "DDDI\\": "src/",
+      "Test\\DDDI\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.3"
+  }
+}
