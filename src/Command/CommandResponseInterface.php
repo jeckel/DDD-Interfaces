@@ -21,7 +21,7 @@ interface CommandResponseInterface
     public function isNack(): bool;
 
     /**
-     * @return EventCollection|null
+     * @return null|iterable
      */
-    public function getEvents(): ?EventCollection;
+    public function getEvents(): ?iterable;
 }

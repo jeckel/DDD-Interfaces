@@ -62,9 +62,9 @@ trait CommandResponseTrait
     }
 
     /**
-     * @return EventCollection|null
+     * @return iterable|null
      */
-    public function getEvents(): ?EventCollection
+    public function getEvents(): ?iterable
     {
         return $this->events;
     }
