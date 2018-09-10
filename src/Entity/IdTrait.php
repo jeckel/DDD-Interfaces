@@ -20,7 +20,7 @@ trait IdTrait
      */
     public function __construct(string $value)
     {
-        Assertion::true(self::isValid($value), 'Invalid id: '.$value);
+        Assertion::true($this->isValid($value), 'Invalid id: '.$value);
         $this->value = $value;
     }
 
@@ -31,7 +31,7 @@ trait IdTrait
      */
     public static function generate(): IdInterface
     {
-        return new self((string) Uuid::uuid4());
+        return new static((string) Uuid::uuid4());
     }
 
     /**
@@ -57,7 +57,7 @@ trait IdTrait
      */
     public function equals(IdInterface $id): bool
     {
-        return get_class($id) == self::class && $id->getValue() === $this->value;
+        return get_class($id) == static::class && $id->getValue() === $this->value;
     }
 
     /**

@@ -1,14 +1,12 @@
 <?php
 namespace Test\DDDI\Entity\Fixture;
 
-use DDDI\Entity\IdInterface;
-use DDDI\Entity\IdTrait;
+use DDDI\Entity\IdAbstract;
 
 /**
  * Class MyId
  * @package Test\DDDI\Entity\Fixture
  */
-class MyId implements IdInterface
+class MyId extends IdAbstract
 {
-    use IdTrait;
 }

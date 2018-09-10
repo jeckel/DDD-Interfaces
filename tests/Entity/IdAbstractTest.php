@@ -9,7 +9,7 @@ use Test\DDDI\Entity\Fixture\MyId;
  * Class Test
  * @package DDDI\Entity
  */
-class IdTraitTest extends TestCase
+class IdAbstractTest extends TestCase
 {
     /**
      * @throws \Assert\AssertionFailedException
